@@ -1,22 +1,25 @@
 package app;
 
-import java.io.IOException;
 import java.net.URL;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 
 /**
  *
- * @author Lab1
+ * @author btardin
  */
 public class TelasController {
-    public static void chamarTela(URL telaUrl) throws IOException {
-        Parent root = FXMLLoader.load(telaUrl);
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
-        stage.setScene(scene);
-        stage.show();
+    public static void chamarTela(URL telaUrl) {
+        try {
+            FXMLLoader loader = new FXMLLoader(telaUrl);
+            Scene scene = new Scene(loader.load());
+            Stage stage = new Stage();
+            stage.setScene(scene);
+            stage.show();
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Erro ao chamar tela!", JOptionPane.ERROR_MESSAGE);
+        }
     }
 }

@@ -5,12 +5,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="240.0" prefWidth="332.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="app.Tela2Controller">
+<AnchorPane id="AnchorPane" prefHeight="240.0" prefWidth="332.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.Tela2Controller">
     <stylesheets>
         <URL value="@tela2.css" />
     </stylesheets>
    <children>
-      <Label layoutX="135.0" layoutY="103.0" text="Tela 2">
+      <Label fx:id="lblValor" layoutX="135.0" layoutY="103.0" text="Tela 2">
          <font>
             <Font size="24.0" />
          </font>

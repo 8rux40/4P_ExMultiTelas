@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package app;
 
 import java.io.IOException;
@@ -20,7 +15,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Lab1
+ * @author btardin
  */
 public class Tela1Controller implements Initializable {
     
@@ -29,11 +24,7 @@ public class Tela1Controller implements Initializable {
     
     @FXML
     private void onBtnChamarTela2Action(){
-        try {
-            TelasController.chamarTela(getClass().getResource("Tela2.fxml"));
-        } catch (IOException ex) {
-            Logger.getLogger(Tela1Controller.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        TelasController.chamarTela(getClass().getResource("Tela2.fxml"));
     }
     
     @Override
